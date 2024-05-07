@@ -1,13 +1,52 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
+    background-image: url('/static/background.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #D3D3D3; /* Very bright grey for text */
+    display: flex;
+    flex-direction: column; /* Aligns children elements in a column */
+    justify-content: flex-start; /* Aligns items to the top of the container */
+    align-items: center; /* Centers items horizontally */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center text */
+}
+
+h1 {
+    width: 100%; /* Full width to ensure it's centered */
+    margin-top: 0;
+    margin-bottom: 20px; /* Space before the search elements */
 }
 
 input, button {
     padding: 10px;
-    margin: 5px;
+    margin-bottom: 10px; /* Space between elements */
+    display: block; /* Makes input and button take the full available width */
+    border-radius: 8px;
+    width: 100%; /* Helps ensure elements don't stretch beyond the max width */
+    max-width: 500px; /* Maximum width of these elements */
+}
+
+button {
+    background-color: rgb(23, 23, 23);
+    color: rgb(227, 227, 227);
+    border: none;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 8px;
+    width: 50%; /* Half the width of the input box */
+    max-width: 250px; /* Maximum width matching half of the input box */
+}
+
+button:hover, button:focus {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 div#results {
-    margin-top: 20px;
+    width: 100%;
+    max-width: 500px; /* Aligns width with input and button */
+    margin-bottom: 20px; /* Space after the results */
 }

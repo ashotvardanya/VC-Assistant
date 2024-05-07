@@ -23,14 +23,18 @@ function displayResults(results) {
     const resultsContainer = document.getElementById('results');
     resultsContainer.innerHTML = ''; // Clear previous results
 
-    if (Array.isArray(results)) { // Check if results is an array
-        results.forEach(result => {
-            const resultElement = document.createElement('div');
-            resultElement.textContent = `URL: ${result.url}, Distance: ${result.distance}`;
-            resultsContainer.appendChild(resultElement);
-        });
-    } else {
-        // If results is not an array, display an error message
+    // Only display the top three results
+    results.slice(0, 3).forEach(result => {
+        const resultElement = document.createElement('a'); // Create an anchor element for clickable links
+        resultElement.href = result.url; // Set href to the result URL
+        resultElement.textContent = `URL: ${result.url}`; // Set the display text
+        resultElement.target = "_blank"; // Open in new tab
+        resultsContainer.appendChild(resultElement);
+        resultsContainer.appendChild(document.createElement('br')); // Add a line break for spacing
+    });
+
+    if (results.length === 0) {
+        // If no results, display an error message
         const errorElement = document.createElement('div');
         errorElement.textContent = 'No results found.';
         resultsContainer.appendChild(errorElement);
