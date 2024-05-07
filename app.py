@@ -4,12 +4,12 @@ import numpy as np
 import faiss
 import json
 from flask_cors import CORS
-
+import os
 app = Flask(__name__, static_folder='static')
 CORS(app)  # Enable CORS for all origins
 
 # Load API Key securely
-openai.api_key = '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'
+openai.api_key = os.environ.get('OPENAI_API_KEY')
 
 # Load embeddings
 with open('vc_embeddings.json', 'r') as f:
