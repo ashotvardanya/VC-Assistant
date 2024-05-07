@@ -9,7 +9,7 @@ app = Flask(__name__, static_folder='static')
 CORS(app)  # Enable CORS for all origins
 
 # Load API Key securely
-openai.api_key = os.environ.get('OPENAI_API_KEY')
+openai.api_key = ''
 
 # Load embeddings
 with open('vc_embeddings.json', 'r') as f:
