@@ -15,7 +15,11 @@ The VC-Assistant is currently running at:
 Alternatively, you can try:
 
 - [GitHub Dev Environment](https://supreme-space-winner-vg6777644pq2w7xg-5000.app.github.dev/)
-  
+
+## The Data
+
+I have created a database of websites by scanning [VC Pro Database](https://www.vcprodatabase.com), which lists many VC firm websites. I then scraped data from approximately 100 of these websites, cleaned the text, and generated embeddings. Your provided links will also be scraped and added to the database if they are compatible with BeautifulSoup4. I initially chose BeautifulSoup4 for its simplicity and to avoid potential compatibility issues. However, Chrome WebDriver could also be utilized in headless mode for more dynamic web interactions .
+
 ## How to Use
 
 1. **Search by Descriptive Phrases:**
