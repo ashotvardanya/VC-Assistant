@@ -10,7 +10,7 @@ No installation is required to use this tool. Simply access it through your web 
 
 The VC-Assistant is currently running at:
 
-- [Heroku App](https://vc-assistant-6a98c041519b.herokuapp.com/)
+- [Heroku App](https://vc-assistant-a9a21606fca4.herokuapp.com/)
 
 Alternatively, you can try:
 
